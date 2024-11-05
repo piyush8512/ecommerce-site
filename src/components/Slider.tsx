@@ -14,6 +14,7 @@ const slides = [
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {
+    id:2,
     title: "Winter Sale Collections",
     description: "Sale! Up to 50% off!",
     img: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -43,10 +44,8 @@ const Slider = () => {
 
   return (
     <div className="h-[calc(100vh-80px)] overflow-hidden">
-      <div
-        className="w-max h-full flex transition-all ease-in-out duration-1000"
-        style={{ transform: `translateX(-${current * 100}vw)` }}
-      >
+      <div className="w-max h-full flex transition-all ease-in-out duration-1000"
+        style={{ transform: `translateX(-${current * 100}vw)` }}>
         {slides.map((slide) => (
           <div
             className={`${slide.bg} w-screen h-full flex flex-col gap-16 xl:flex-row`}
